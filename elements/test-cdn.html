@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Hello Widget - CDN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        code {
+            background: rgba(0,0,0,0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌐 Test Hello Widget da CDN</h1>
+        <p class="subtitle">Caricato da jsDelivr (GitHub)</p>
+        
+        <div class="info">
+            <p><strong>📦 Sorgente CDN:</strong></p>
+            <p><code>https://cdn.jsdelivr.net/gh/MirkoFerrara/test@main/elements/hello-widget.js</code></p>
+            <p style="margin-top: 10px; color: #666; font-size: 0.9em;">
+                ⚠️ Nota: Dopo il push, attendi 2-5 minuti per la cache CDN
+            </p>
+        </div>
+
+        <!-- Carica da jsDelivr CDN -->
+        <script src="https://cdn.jsdelivr.net/gh/MirkoFerrara/test@main/elements/hello-widget.js"></script>
+
+        <!-- Usa i componenti -->
+        <hello-widget></hello-widget>
+        <hello-widget name="Da CDN! 🌍" color="#FF5722"></hello-widget>
+        <hello-widget name="Mirko @ EY" color="#1976D2"></hello-widget>
+
+        <script>
+            // Widget dinamico dopo 3 secondi
+            setTimeout(() => {
+                const widget = document.createElement('hello-widget');
+                widget.setAttribute('name', 'Caricato Dinamicamente 🎨');
+                widget.setAttribute('color', '#9C27B0');
+                document.querySelector('.container').appendChild(widget);
+            }, 3000);
+        </script>
+    </div>
+</body>
+</html>

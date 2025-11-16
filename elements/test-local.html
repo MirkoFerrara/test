@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Hello Widget - LOCAL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Test Hello Widget (LOCAL)</h1>
+    
+    <div class="info">
+        <p><strong>⚡ Caricamento da file locale</strong></p>
+        <p><code>hello-widget.js</code></p>
+    </div>
+
+    <!-- Carica dal file locale -->
+    <script src="hello-widget.js"></script>
+
+    <hello-widget></hello-widget>
+    <hello-widget name="Angular" color="#DD0031"></hello-widget>
+    <hello-widget name="Mirko" color="#1976D2"></hello-widget>
+
+    <script>
+        setTimeout(() => {
+            const widget = document.createElement('hello-widget');
+            widget.setAttribute('name', 'Dinamico 🚀');
+            widget.setAttribute('color', '#9C27B0');
+            document.body.appendChild(widget);
+        }, 2000);
+    </script>
+</body>
+</html>
