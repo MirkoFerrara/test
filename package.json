@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:elements": "ng build --configuration production && node build-elements.js"
+    "build:elements": "ng build --configuration=production --single-bundle && node copy-bundle.js"
   },
   "prettier": {
     "printWidth": 100,
@@ -48,6 +48,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ngx-build-plus": "^20.0.0",
     "typescript": "~5.9.2"
   }
 }
